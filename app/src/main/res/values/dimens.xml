@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="item_text_size">50px</dimen>
+    <dimen name="item_number_size">23px</dimen>
+    <dimen name="item_size">150px</dimen>
+    <dimen name="item_btn_size">80px</dimen>
+    <dimen name="rect_btn_stroke">4px</dimen>
+
+</resources>

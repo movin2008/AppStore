@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+apply from: "../version.gradle"
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.1"
+
+    defaultConfig {
+        applicationId "com.shuiyes.appstore"
+        minSdkVersion 23
+        targetSdkVersion 26
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+
+    // okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.9.0'
+
+    implementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+}
